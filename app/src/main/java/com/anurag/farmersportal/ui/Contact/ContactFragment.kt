@@ -17,15 +17,7 @@ import com.anurag.farmersportal.databinding.FragmentHomeBinding
 import com.anurag.farmersportal.ui.home.HomeViewModel
 
 class ContactFragment  : Fragment() {
-    lateinit var msgbutton: Button
-    lateinit var username:EditText
     lateinit var email:EditText
-    lateinit var number:EditText
-    lateinit var subject:EditText
-    lateinit var message:EditText
-    lateinit var map:ImageView
-    lateinit var locationcard:CardView
-    lateinit var mailcard:CardView
         override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

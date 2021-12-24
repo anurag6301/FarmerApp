@@ -67,6 +67,8 @@ open class LoginActivity : AppCompatActivity() {
                         intent.putExtra("USERNAME", rs.getString(1))
                         intent.putExtra("EMAIL", loginemail)
                         intent.putExtra("USERTYPE", "BUYER")
+                        intent.putExtra("AADHARNUMBER",rs.getString(2))
+                        intent.putExtra("PHONENUMBER",rs.getString(3))
                         startActivity(intent)
                     } else {
                         Toast.makeText(
@@ -91,6 +93,8 @@ open class LoginActivity : AppCompatActivity() {
                         intent.putExtra("EMAIL", loginemail)
                         intent.putExtra("USERNAME", rs2.getString(1))
                         intent.putExtra("USERTYPE", "PRODUCER")
+                        intent.putExtra("AADHARNUMBER",rs2.getString(2))
+                        intent.putExtra("PHONENUMBER",rs2.getString(3))
                         startActivity(intent)
                     } else {
                         Toast.makeText(

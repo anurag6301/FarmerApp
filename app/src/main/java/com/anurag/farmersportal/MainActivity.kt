@@ -20,6 +20,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.anurag.farmersportal.databinding.ActivityMainBinding
+import java.lang.reflect.TypeVariable
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,9 +32,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var card1:TextView
     lateinit var card2:TextView
     lateinit var card3:TextView
-
 private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,8 +42,6 @@ private lateinit var binding: ActivityMainBinding
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            /*var intent=Intent(Intent.ACTION_DIAL)
-            intent.setData(Uri.parse("tel:9876543210"))*/
             var string="mailto:info@farmersportal.com"
             var intent=Intent(Intent.ACTION_SENDTO)
             intent.putExtra(Intent.EXTRA_SUBJECT,"SUBJECT")
@@ -111,5 +108,25 @@ private lateinit var binding: ActivityMainBinding
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+    public fun getMyname():String?{
+        var name=intent.getStringExtra("USERNAME")
+        return name
+    }
+    public fun getMyemail():String?{
+        var email=intent.getStringExtra("EMAIL")
+        return email
+    }
+    public fun getMyusertype():String?{
+        var usertype=intent.getStringExtra("USERTYPE")
+        return usertype
+    }
+    public fun getMynumber():String?{
+        var number=intent.getStringExtra("PHONENUMBER")
+        return number
+    }
+    public fun getMyAadhar():String?{
+        var aadhar=intent.getStringExtra("AADHARNUMBER")
+        return aadhar
     }
 }

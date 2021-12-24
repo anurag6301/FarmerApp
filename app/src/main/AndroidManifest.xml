@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FARMERsPORTAL">
         <activity
-            android:name=".ui.Contact.ContactActivity"
-            android:exported="false" />
-        <activity
             android:name=".LiquidLoadingActivity"
             android:exported="false" />
         <activity
@@ -30,7 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.FARMERsPORTAL.NoActionBar" />
+            android:theme="@style/Theme.FARMERsPORTAL.NoActionBar"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
